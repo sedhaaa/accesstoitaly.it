@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Alapértelmezett háttér: MÉLY FEKETE (#1a1a1a) */
+  /* Így a sötét Hero és Footer alatt nem tud fehér csík kivillanni */
+  --background: #1a1a1a;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -12,15 +14,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
+html, body {
+  background-color: #1a1a1a !important; /* Kényszerített fekete alap */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
